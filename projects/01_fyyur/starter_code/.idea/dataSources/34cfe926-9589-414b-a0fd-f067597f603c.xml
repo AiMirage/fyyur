@@ -793,8 +793,11 @@ false Zulu
     <database id="3" parent="1" name="fyyur">
       <ObjectId>24587</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>497</IntrospectionStateNumber>
+      <IntrospectionStateNumber>501</IntrospectionStateNumber>
       <Current>1</Current>
+      <Relations>sequence|table|24593|24595|1
+sequence|table|24604|24606|1
+</Relations>
     </database>
     <database id="4" parent="1" name="postgres">
       <ObjectId>13442</ObjectId>
@@ -850,7 +853,7 @@ false Zulu
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>498</IntrospectionStateNumber>
+      <IntrospectionStateNumber>502</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="17" parent="3" name="heap">
@@ -920,5 +923,181 @@ false Zulu
     <language id="26" parent="3" name="internal"/>
     <language id="27" parent="3" name="plpgsql"/>
     <language id="28" parent="3" name="sql"/>
+    <sequence id="29" parent="16" name="Artist_id_seq">
+      <ObjectId>24593</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>500</StateNumber>
+      <DataType>integer|0s</DataType>
+    </sequence>
+    <sequence id="30" parent="16" name="Venue_id_seq">
+      <ObjectId>24604</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>500</StateNumber>
+      <DataType>integer|0s</DataType>
+    </sequence>
+    <table id="31" parent="16" name="Artist">
+      <ObjectId>24595</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>500</StateNumber>
+    </table>
+    <table id="32" parent="16" name="Venue">
+      <ObjectId>24606</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>500</StateNumber>
+    </table>
+    <table id="33" parent="16" name="alembic_version">
+      <ObjectId>24588</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>499</StateNumber>
+    </table>
+    <column id="34" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>500</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;Artist_id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="35" parent="31" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="36" parent="31" name="city">
+      <Position>3</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="37" parent="31" name="state">
+      <Position>4</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="38" parent="31" name="phone">
+      <Position>5</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="39" parent="31" name="genres">
+      <Position>6</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="40" parent="31" name="image_link">
+      <Position>7</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="31" name="facebook_link">
+      <Position>8</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="42" parent="31" name="Artist_pkey">
+      <ObjectId>24602</ObjectId>
+      <StateNumber>500</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="43" parent="31" name="Artist_pkey">
+      <ObjectId>24603</ObjectId>
+      <StateNumber>500</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>Artist_pkey</UnderlyingIndexName>
+    </key>
+    <column id="44" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>500</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;Venue_id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="45" parent="32" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="46" parent="32" name="city">
+      <Position>3</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="32" name="state">
+      <Position>4</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="48" parent="32" name="address">
+      <Position>5</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="32" name="phone">
+      <Position>6</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="32" name="image_link">
+      <Position>7</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="32" name="facebook_link">
+      <Position>8</Position>
+      <DataType>varchar(120)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="52" parent="32" name="Venue_pkey">
+      <ObjectId>24613</ObjectId>
+      <StateNumber>500</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="53" parent="32" name="Venue_pkey">
+      <ObjectId>24614</ObjectId>
+      <StateNumber>500</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>Venue_pkey</UnderlyingIndexName>
+    </key>
+    <column id="54" parent="33" name="version_num">
+      <Position>1</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>499</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="55" parent="33" name="alembic_version_pkc">
+      <ObjectId>24591</ObjectId>
+      <StateNumber>499</StateNumber>
+      <ColNames>version_num</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="56" parent="33" name="alembic_version_pkc">
+      <ObjectId>24592</ObjectId>
+      <StateNumber>499</StateNumber>
+      <ColNames>version_num</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>alembic_version_pkc</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>
